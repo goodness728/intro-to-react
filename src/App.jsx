@@ -5,8 +5,11 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
-function increaseCount() {
-  setCount(count + 1);
+
+  function increaseCount(amount = 1) {
+  setCount((curr) => {
+    return curr + amount;
+  });
 }
 
   return (
